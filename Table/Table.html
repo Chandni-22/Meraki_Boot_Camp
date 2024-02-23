@@ -4,6 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Table</title>
+    <style>
+        table{
+            border-collapse: collapse;
+        }
+        tr:nth-of-type(odd)
+        {
+            background-color: rgb(149, 219, 163);
+        }
+        tr:nth-of-type(even){
+            background-color: rgb(233, 233, 233);
+        }
+        th{
+            background-color: rgb(65, 129, 72);
+        }
+        th[colspan="8"]{
+            background-color: rgb(252, 252, 251);
+        }
+
+    </style>
 </head>
 <body>
     <table border="3px" width="55%" cellpadding="12px">
@@ -70,8 +89,6 @@
                 <td>Physics</td>
                 <td>Biology</td>
             </tr>
-        </tbody>
-        <tfoot>
             <tr>
                 <td>Saturday</td>
                 <td>Math</td>
@@ -79,7 +96,7 @@
                 <td>Biology</td>
                 <td colspan="4">No Class</td>
             </tr>
-        </tfoot>
+        </tbody>
     </table>
 </body>
 </html>

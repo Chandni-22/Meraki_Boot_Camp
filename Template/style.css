@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url(background.jpeg);
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* position: fixed; */
+    /* height: 400vh; */
+}
+H1{
+    color: rgb(253, 251, 251);
+    text-align: center;
+    margin-top: 2rem;
+}
+.main-box{
+    border: 0.5rem solid white;
+    height: 50rem; 
+    display: flex;
+    width: 100rem;
+    margin-left: 5rem;
+    flex-wrap: wrap;
+}
+.box{
+    display: flex;
+    justify-content: space-around;
+}
+.image{
+    border: 1rem solid white;
+    border-radius: 106px;
+    height: 40rem;
+    margin: 3rem;
+    background-color: white;
+}
+.shows{
+    height:15rem;
+    width: 25rem;
+    border-top-left-radius: 106px;
+    border-top-right-radius: 106px;
+}
