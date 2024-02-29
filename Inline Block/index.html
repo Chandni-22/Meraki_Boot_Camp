@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: black;
+        }
+        #all{
+            height: 65.5rem;
+            width: 134rem;
+        }
+        .cars{
+            display: inline-block;
+        }
+        .first-div{
+            margin-top: 2.5rem;
+        }
+        .star-img{
+            padding: 1.5rem;
+            height: 19rem;
+            width: 19rem;
+        }
+        .star-img-div{
+            border: 2px solid grey;
+            margin: 1rem;
+            height: 19rem;
+            width: 19rem;
+        }
+        #cent-img{
+            height: 45rem;
+            width: 35rem;
+            margin-left: 7rem;
+            margin-top: 16.2rem;
+            padding-bottom: 15rem;
+        }
+        #cent-img-div{
+            border: 5px solid grey;
+            width: 50rem;
+            height: 63rem;
+            margin-left: 1rem;
+        }
+        nav{
+            margin: 1rem;
+            background-color:grey;
+        }
+        li{
+            display: inline-block;
+            list-style-type:none;
+            margin: 4px;
+            font-size: 20px;
+            margin-left: 1rem;
+        }
+        a{
+            text-decoration: none;
+        }
+        .last-div{
+            float: right;
+            height: 65rem;
+            width: 58rem;
+            margin-left: 1rem;
+            margin-right: 1rem;
+            line-height: 2.5rem;
+        }
+        .texts{
+            color: white;
+            margin: 1rem;
+        }
+        .inline-div{
+            display: inline-block;
+        }
+        .back-star{
+            background-color: green;
+            height: 2.5rem;
+            width: 9rem;
+            padding: 0.6rem;
+            border-radius: 8px;
+            margin-left: 1rem;
+        }
+        .p{
+            color: whitesmoke;
+            padding: 1rem;
+            font-size: 19px;
+        }
+        .crossed{
+            text-decoration: line-through;
+            padding-left: 1rem;
+        }
+        hr{
+            margin: 1rem;
+            color: whitesmoke;
+        }
+        .tag{
+            border: 1px dashed whitesmoke;
+            height: 8rem;
+            width: 22rem;
+            padding: 0.5rem;
+            margin-left: 1rem;
+        }
+        .button{
+            height: 3rem;
+            border-radius: 9px;
+            margin: 1rem;
+            border:none;
+        }
+        .last{
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <div id="all">
+        <div class="cars first-div" >
+            <div class="star-img-div"><img class="star-img" src="front.jpeg" alt="Image is lodding...."></div>
+            <div class="star-img-div"><img class="star-img" src="side.jpeg" alt="Image is lodding...."></div>
+            <div class="star-img-div"><img class="star-img" src="center.jpeg" alt="Image is lodding...."></div>
+        </div>
+        <div class="cars">
+            <div id="cent-img-div">
+                <img id="cent-img" src="open.jpeg" alt="Image is lodding....">
+            </div>
+        </div>
+        <div class="cars last-div">
+            <nav>
+                <ul>
+                    <b><li><a href="#">Home</a></li>
+                    <li>></li>
+                    <li><a href="#">Product</a></li>
+                    <li>></li>
+                    <li>Cars</li></b>
+                </ul>
+            </nav>
+            <div class="texts">
+                <h2>Opens in a new window Lamborghini Aventador LP700 LP720 Facelift Kit LP750SV | Default Title</h2>
+            </div>
+            <div>
+                <div class="texts inline-div">
+                    <i class="fa-solid fa-star  back-star"> 4.5 Stars</i>
+                </div>
+                <div class="inline-div">
+                    <p class="p">3,50,000 Rating & 4M Reviews</p>
+                </div>
+            </div>
+            <div class="texts">
+                <div class="inline-div">
+                    <h1><i class="fa-solid fa-indian-rupee-sign"> 7,19,999.20</i></h1>
+                </div>
+                <div class="inline-div">
+                    <p class="crossed">₹ 9,19,999.20</p>
+                </div>
+            </div>
+            <div> 
+                <p class="inline-div p">You Saved</p>
+                <p class="texts inline-div">₹ 2,00,000.00</p>
+            </div><hr>
+            <p class="p" style="font-size: 1.5rem;">EMI starts at 20,000. No Cost EMI Available <br>Warranty: 1 year warranty <br>7 Days service policy <br>In Stock: 500 units sold this week.</p>
+            <div class="tag">
+                <i class="fa-solid fa-tag fa-flip-horizontal fa-2xl inline-div" style="color: #FFD43B;"></i>
+                <p class="p inline-div">Get 5% instant discount + <br>10X rewards @ RENTOPC</p>
+            </div>
+            <div class="last">
+                <button class="button" type="button" style="width: 7rem; background-color: blue;">Add to Cart</button>
+                <button class="button" type="button" style="width: 5rem; background-color: green;">Buy Now</button>
+                <button class="button" type="button" style="width: 4rem; background-color: azure;"><i class="fa-solid fa-heart fa-2xl" style="color: #a51d2d;"></i></button>
+            </div>
+    </div>
+</body>
+</html>
