@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex-Box</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            border: 0.5rem solid black;
+            height: 65.5rem;
+            width: 134rem;
+        }
+        header{
+            margin: 1rem;
+            border: 3px solid black;
+            height: 8rem;
+            display: flex;
+            justify-content: space-between;
+            background-color: rgb(197, 195, 195);
+        }
+        .logo{
+            border: 3px solid black;
+            height: 5rem;
+            width: 7rem;
+            margin: 1rem;
+            margin-left: 3rem;
+        }
+        nav{
+            border: 3px solid black;
+            height: 5rem;
+            width: 128rem;
+            margin: 1rem;
+            display: flex;
+            flex-flow: row;
+            background-color: rgb(174, 247, 223);
+            
+        }
+        li{
+            list-style-type:none;
+            font-size: 25px;
+            margin: 1.5rem 17rem;
+        }
+        a{
+            text-decoration: none;
+        }
+        .cent{
+            border: 3px solid black;
+            margin: 1rem;
+            padding: 1rem 2.5rem;
+            display: flex;
+            justify-content: space-between;
+            background-color: rgb(244, 173, 173);
+        }
+        .left{
+            border: 3px solid black;
+            height: 45rem;
+            width: 40rem;
+            background-color: rgb(239, 169, 239);
+        }
+        .img-div{
+            margin: 5rem;
+        }
+        .left-img{
+            border: 3px solid black;
+            height: 25rem;
+            width: 30rem;
+        }
+        .img-p{
+            border: 3px solid black;
+            height: 6rem;
+            margin-top: 4rem;
+            text-align: center;
+            padding-top: 2rem;
+            background-color: rgb(195, 55, 237);
+        }
+        .right{
+            border: 3px solid black;
+            height: 45rem;
+            width: 80rem;
+            background-color: rgb(239, 169, 239);
+        }
+        .heed{
+            border: 3px solid black;
+            height: 6rem;
+            margin: 2rem;
+            padding-top: 1.5rem;
+            text-align: center;
+            background-color: rgb(174, 247, 223);
+        }
+        .right-div{
+            border: 3px solid black;
+            height: 25rem;
+            margin: 5rem 2rem;
+            display: flex;
+            justify-content:space-around;
+            background-color: lavenderblush;
+        }
+        .last-img{
+            border: 3rem sol;
+            height: 15rem;
+            width: 13rem;
+            margin: 5rem 1.5rem;
+        }
+        footer{
+            margin: 1rem;
+            border: 3px solid black;
+            height: 6rem;
+            text-align: center;
+            padding-top: 2rem;
+            background-color: rgb(197, 195, 195);
+        }
+        p{
+            font-size: 1.5rem;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <img class="logo" src="l1.jpeg" alt="Image is lodding....">
+        </div>
+        <nav>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Product</a></li>
+            <li><a href="#">Cars</a></li>
+        </nav>
+    </header>
+    <div class="cent">
+        <div class="left">
+            <div class="img-div">
+                <img class="left-img" src="l1.jpeg" alt="Image is lodding....">
+                <div class="img-p"><h1>Display</h1></div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="heed"><h1>Head</h1></div>
+            <div class="right-div">
+                <img class="last-img" src="l1.jpeg" alt="Image is lodding....">
+                <img class="last-img" src="l1.jpeg" alt="Image is lodding....">
+                <img class="last-img" src="l1.jpeg" alt="Image is lodding....">
+                <img class="last-img" src="l1.jpeg" alt="Image is lodding....">
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>Made by Chandni Vishwakarma.</p>
+    </footer>
+</body>
+</html>

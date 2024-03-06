@@ -1,0 +1,235 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* styling the doc. */
+body{
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: black;
+	font-family: "Signika", sans-serif;
+}
+.all{
+	height: 64rem;
+	width: 70rem;
+	background-color: whitesmoke;
+	display: flex;
+}
+.bord{
+	border: 1px solid rgb(172, 171, 171);
+	background-color: white;
+}
+.left-div{
+	width: 25%;
+	padding: 1.5rem 1rem;
+}
+.logo{
+	height: 5rem;
+}
+.logo-div{
+	line-height: 4.6rem;
+	margin-top: 1rem;
+}
+.logo-word{
+	margin-left: 1rem;
+	font-size: 19px;
+}
+.Profile{
+	height: 2rem;
+	width: 2rem;
+	border-radius: 2rem;
+	margin-top: 1.4rem;
+ 	border: 1px solid black;
+}
+.profile-div{
+	display: flex;
+}
+.more{
+	margin-top: 17rem;
+}
+.cent-div{
+	width: 30%;
+	margin: 2rem 6rem;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+.cent{
+	border-radius: 0.5rem;
+	width: 38rem;
+}
+.cent-up{
+	height: 9rem;
+	width: 36rem;
+	display: flex;
+	justify-content: space-evenly;
+	padding: 1rem;
+}
+.snake-div{
+	padding: 0.3rem;
+	height: 6rem;
+	width: 5rem;
+	color: rgb(87, 86, 86);
+	text-align: center;
+}
+.snake-pic-bor{
+	border: 3px solid rgb(221, 2, 246);
+	border-radius: 6rem;
+	height: 5rem;
+	width: 5rem;
+	padding: 1.5px;
+}
+.snakes-pic{
+	border-radius: 6rem;
+	height: 5rem;
+	width: 5rem;
+}
+.cent-mid{
+	height: 63rem;
+}
+.cent-logo-pic{
+	height: 2.5rem;
+	width: 2.5rem;
+	border-radius: 6rem;
+}
+.cent-div-pic-bor{
+	border: 3px solid rgb(221, 2, 246);
+	border-radius: 6rem;
+	height: 2.5rem;
+	width: 2.5rem;
+	padding: 2px;
+}
+.post-logo{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	width: 9rem;
+	font-weight: bold;
+}
+.post-up{
+	display: flex;
+	justify-content: space-between;
+	height: 5rem;
+	width: 36rem;
+	align-items: center;
+}
+.post{
+	width: 38rem;
+}
+.post-img{
+	border: 3px solid rgb(88, 88, 88);
+	width: 37.79rem;
+	height: 24rem;
+}
+.heart{
+	height: 3rem;
+	width: 12rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.post-tag{
+	width: 36rem;
+	height: 3rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-left: 1rem;
+}
+.likes{
+	height: 3rem;
+	width: 24.5rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.comment{
+	height:14rem;
+	width: 36rem;
+	margin: 1rem;
+}
+.like-p{
+	height: 2rem;
+	width: 2rem;
+	border-radius: 5rem;
+}
+.like-p-div{
+	border: 3px solid white;
+}
+.t-div{
+	position: absolute;
+	margin-left: 1.5rem;
+}
+.bold{
+	font-weight: bold;
+}
+.text{
+	font-size: 19px;
+}
+.gray{
+	color: gray;
+}
+.smile{
+	display: flex;
+	align-items: center;
+}
+.smile-div{
+	display: flex;
+	justify-content: space-between;
+	margin-top: 1rem;
+	font-size: 24px;
+}
+.add{
+	margin-left: 1rem;
+}
+a{
+	text-decoration: none;
+	margin-right: 0.5rem;
+}
