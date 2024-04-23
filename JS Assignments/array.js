@@ -79,3 +79,28 @@
 // };
 // let arr=[1,3,4,5,6,7,1,1];
 // console.log(evenNumbersArray(arr));
+
+
+
+/*<------------------Test------------------>*/
+
+// function addTwoArray(arr1,arr2){
+//     let arr3=arr1;
+//     arr3.push(...arr2);
+//     return (arr3);
+// };
+// let arr1=[1,3];
+// let arr2=[2,5];
+// console.log(addTwoArray(arr1,arr2));
+
+
+// let arr=[1,2,3]
+// let arr2=""
+// for(let i=0;i<(arr.length);i++){
+//     let a=arr[i].toString();
+//     arr2+=a;
+//     if (i!==(arr.length-1)){
+//         arr2+="-";
+//     };
+// };
+// console.log(arr2)
