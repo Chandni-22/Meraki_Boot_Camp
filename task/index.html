@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: black;
+        margin-top: 3rem;
+    }
+    #first-div{
+        width: 32rem;
+        display: flex;
+        justify-content: space-between;
+    }
+    .container{
+        line-height: 4rem;
+    }
+    .box{
+        background-color: white;
+        height: 10rem;
+        width: 15rem;
+        border: 5px solid gray;
+        text-align: center;
+        padding-top: 5rem;
+    }
+    .btn{
+        height: 1.5rem;
+        width: 6rem;
+    }
+
+    form{
+        border: 5px solid gray;
+        height: 15rem;
+        width: 19.5rem;
+        padding: 2rem;
+        line-height: 3;
+        margin-top: 2rem;
+    }
+    label{
+        color: white;
+    }
+    #form-div{
+        border: 3px solid gray;
+        background-color: white;
+        height: 6rem;
+        width: 15rem;
+    }
+    #submit{
+        margin-left: 3rem;
+    }
+</style>
+<body>
+    <div id="first-div">
+        <div class="container">
+            <div class="box" id="box1">Background Color</div>
+            <button class="btn" id="changeColor" type="submit">Change color</button>
+        </div>
+        <div class="container">
+            <div class="box" id="box2">Captcha:</div>
+            <button class="btn" id="captcha" type="submit">Click here</button>
+        </div>
+    </div>
+    <form action="">
+        <label for="name">User name:</label>
+        <input type="text" name="name" id="name" required><br>
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password" required><br>
+        <button type="button" id="show">Show</button>
+        <button type="submit" id="submit">Submit</button>
+        <div id="form-div"></div>
+    </form>
+</body>
+<script>
+    // Box1 function
+    function randomColor(){
+        const color='#';
+        return (color+Math.floor(Math.random()*16777215).toString(16))
+    };
+    document.getElementById('changeColor').addEventListener('click',function(){
+        box1.style.backgroundColor=randomColor();
+    });
+
+    // Box2 function
+    function generateCaptcha(){
+        let captcha='';
+        let cap=""
+        for(let i=0;i<6;i++){
+            captcha+=(Math.random().toString(36).charAt(2));
+        }
+        return(captcha);
+    };
+    document.getElementById('captcha').addEventListener('click',function(){
+        document.getElementById('box2').innerText=("Captcha: "+generateCaptcha())
+    });
+
+    // Form function
+    function showDetails(){
+        const name=document.getElementById("name").value;
+        const password=document.getElementById("password").value;
+        const box=`Username: ${name} <br> Password:${password}`;
+        return box;
+    };
+    document.getElementById('show').addEventListener('click',function(){
+        document.getElementById('form-div').innerHTML=showDetails()
+    });
+</script>
+</html>
