@@ -76,7 +76,7 @@
 <script>
     // Box1 function
     function randomColor(){
-        const color='#';
+        let color='#';
         return (color+Math.floor(Math.random()*16777215).toString(16))
     };
     document.getElementById('changeColor').addEventListener('click',function(){
@@ -85,10 +85,10 @@
 
     // Box2 function
     function generateCaptcha(){
+        let letter="0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
         let captcha='';
-        let cap=""
         for(let i=0;i<6;i++){
-            captcha+=(Math.random().toString(36).charAt(2));
+            captcha+=letter[Math.floor(Math.random()*letter.length)];
         }
         return(captcha);
     };
@@ -98,9 +98,9 @@
 
     // Form function
     function showDetails(){
-        const name=document.getElementById("name").value;
-        const password=document.getElementById("password").value;
-        const box=`Username: ${name} <br> Password:${password}`;
+        let name=document.getElementById("name").value;
+        let password=document.getElementById("password").value;
+        let box=`Username:${name} <br> Password:${password}`;
         return box;
     };
     document.getElementById('show').addEventListener('click',function(){
