@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event bubbling and event capturing</title>
+</head>
+<style>
+    .GrandParent{
+        height: 15rem;
+        width: 15rem;
+        background-color: green;
+    }
+    .Parent{
+        height: 10rem;
+        width: 10rem;
+        background-color: red;
+    }
+    .child{
+        height: 5rem;
+        width: 5rem;
+        background-color: blueviolet;
+    }
+</style>
+<body>
+    <div class="GrandParent">GrandParent
+        <div class="Parent">Parent
+            <div class="child">child</div>
+        </div>
+    </div>
+</body>
+<script>
+    let GrandParent=document.querySelector(".GrandParent");
+    let Parent=document.querySelector(".Parent");
+    let child=document.querySelector(".child");
+
+    GrandParent.addEventListener("click",)
+
+</script>
+</html>
