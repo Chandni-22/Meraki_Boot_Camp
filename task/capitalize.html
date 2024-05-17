@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capitalize</title>
+</head>
+<body>
+    <div>
+        <input type="text" name="Text" id="text">
+        <button id="change">Lets capitalize!</button>
+        <button id="reverse-one-by-one">Lets reverse Sentence!</button>
+        <button id="reverse">Lets reverse words!</button>
+    </div><br>
+    <div id="output"></div>
+</body>
+<script>
+    let text=document.getElementById('text').value;
+
+    // capitalize function
+    function firstCharacterCapital(text){
+        let l=text.length;
+        let capital="";
+        capital+=text[0].toUpperCase();
+        for(let i=1; i<l;i++){
+            if (text[i]===" "){
+                capital+=" ";
+                capital+=(text[i+1]).toUpperCase();
+                i++;
+            }else{
+                capital+=text[i];
+            };
+        };
+        return(capital);
+    };
+
+    document.getElementById('change').addEventListener('click',function(){
+        document.getElementById('output').innerText=firstCharacterCapital(text);
+    });
+
+    // Reverse Sentence one by one function
+    function reverseSentenceOneByOne(text){
+        let reversText=text.split('').reverse().join('');
+        return(reversText);
+    };
+
+    document.getElementById('reverse-one-by-one').addEventListener('click',function(){
+        document.getElementById('output').innerText=reverseSentenceOneByOne(text);
+    });
+
+    // Reverse function
+    function reverseSentence(text){
+        let revers=text.split(' ').reverse().join(' ');
+        return(revers);
+    };
+
+    document.getElementById('reverse').addEventListener('click',function(){
+        document.getElementById('output').innerText=reverseSentence(text);
+    });
+
+</script>
+</html>
