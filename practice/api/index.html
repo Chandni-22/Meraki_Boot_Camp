@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            text-align: center;
+        }
+        form{
+            background-color: #222;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+            display: inline-block;
+            vertical-align: top;
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        
+        input[type="text"] {
+            width: calc(100% - 40px);
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #555; /* Dark gray border */
+            border-radius: 4px;
+            background-color: #333; /* Darker gray background for input */
+            color: #fff; /* White text */
+        }
+        
+        button {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-left: 10px;
+            border: 1px solid #007BFF; /* Darker blue border */
+            transition: background-color 0.3s, border-color 0.3s; /* Smooth transition */
+        }
+        
+        button:hover {
+            background-color: #0056b3;
+            border-color: #0056b3; /* Darker blue on hover */
+        }
+        
+        /* Movie details styles */
+        #details {
+            background-color: #222; /* Dark gray background */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.4); /* Shadow effect */
+            display: inline-block; /* Display details as inline-block */
+            vertical-align: top; /* Align details to top */
+            width: calc(100% - 260px); /* Adjust width to accommodate image */
+            text-align: left; /* Align text to left */
+        }
+        
+        #details h4 {
+            margin: 0;
+            margin-bottom: 10px;
+            font-size: 24px;
+        }
+        
+        #details p {
+            margin: 5px 0;
+            font-size: 16px;
+        }
+        
+        #details span {
+            font-weight: bold;
+        }
+        
+        /* Poster styles */
+        #show {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            display: inline-block; /* Display poster as inline-block */
+            vertical-align: top; /* Align poster to top */
+        }
+        
+    </style>
+</head>
+<body>
+    <form>
+        <label for="movies">Movie:</label>
+        <input type="text" name="movies" id="name" placeholder="Enter movie name"><br>
+        <button type="submit" id="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+    </form>
+    <div>
+        <div id="details">
+            <img src="" alt="Image is loading...." id="show">
+            <div>
+                <h4  id="title">Title:</h4>
+                <p>Released Date: <span id="date"></span></p>
+                <p>Actors: <span id="actors"></span></p>
+                <p>Genre: <span id="genre"></span></p>
+                <p>Plot: <span id="plot"></span></p>
+                <p>Language: <span id="lang"></span></p>
+                <p>Time Duration: <span id="time"></span></p>
+            </div>
+        </div>
+        <p id="error"></p>
+    </div>
+</body>
+<script>
+    document.getElementById('submit').addEventListener('click',function(e){
+        e.preventDefault();
+
+        let name=document.getElementById('name').value;
+        let show=document.getElementById('show');
+        let title=document.getElementById('title');
+        let releasedDate=document.getElementById('date');
+        let actors=document.getElementById('actors');
+        let genre=document.getElementById('genre');
+        let plot=document.getElementById('plot');
+        let lang=document.getElementById('lang');
+        let duration=document.getElementById('time');
+        let error=document.getElementById('error');
+
+        const url=`https://www.omdbapi.com/?t=${name}&apikey=92bb2e1`;
+
+        let promise=fetch(url);
+        promise.then((Response)=>{
+            if(Response.status===200){
+                return(Response.json());
+            }else{
+                throw new Error('Movie unavailable!');
+            }
+        }).then((value)=>{
+            console.log(value);
+            show.src=value.Poster;
+            title.innerText=`Title: ${value.Title}`;
+            releasedDate.innerText=value.Released;
+            actors.innerText=value.Actors;
+            genre.innerText=value.Genre;
+            plot.innerText=value.Plot;
+            lang.innerText=value.Language;
+            duration.innerText=value.Runtime;
+            error.innerText='';
+        })
+        .catch(error=>{
+            error.innerText=error.message;
+            error.style.display='block';
+        });
+    });
+</script>
+</html>
